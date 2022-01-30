@@ -25,8 +25,8 @@
     <script>
         apiLink="api.py";
         $.ajax({
-            url:apiLink,
-            data: 'input from html file'
+            url: apiLink,
+            dataType: 'json'
         }).then(process);
 
         function process(data){
