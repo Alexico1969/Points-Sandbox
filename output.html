@@ -9,9 +9,13 @@
 <body>
     <div class="output"></div>
 
+    <form> 
+        <input type="text" placeholder="put input here"></input>
+        <button id="submit-btn" type="submit">Submit</button>
+    </form>
+
     <script>
         apiLink="api.py";
-        //apiLink="test.json";
         $.ajax({
             url:apiLink,
             data: 'input from html file'
@@ -20,6 +24,13 @@
         function process(data){
             console.log("data:")
             console.log(data);
+        }
+
+        $('#submit-btn').click(sendData);
+
+        function sendData(event){
+            event.preventDefault();
+            alert("button clicked");
         }
     </script>
 </body>
