@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 
+"""
+Run this with:
+
+python3 -m http.server --cgi
+"""
+
 import cgitb
-cgitb.enable()
+cgitb.enable(format="text")
 
 from helper import get_input, json
 
-user_input = get_input()
+# user_input = get_input()
 
 test_data = {
   "firstName": "John",
@@ -13,7 +19,8 @@ test_data = {
   "age": 27
   }
 
-print(test_data)
+# Will give you JSON output in the console
+print(json.dumps(test_data))
 
 '''
 if user_input:
@@ -21,3 +28,4 @@ if user_input:
 else:
     print(test_data)
 ...
+'''

@@ -23,15 +23,23 @@
     </form>
 
     <script>
-        apiLink="api.py";
+        // Add cgi-bin/ dir
+        apiLink="cgi-bin/api.py";
         $.ajax({
             url: apiLink,
             dataType: 'json'
-        }).then(process);
+        })
+            .then(process)
+            .then(handleError); // add error handler in case it doesn't work
+
 
         function process(data){
             console.log("data:")
             console.log(data);
+        }
+
+        function handleError(error) {
+            console.error(error);
         }
 
         $('#submit-btn').click(sendData);
