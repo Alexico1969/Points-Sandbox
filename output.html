@@ -27,7 +27,7 @@
         apiLink="cgi-bin/api.py";
         $.ajax({
             url: apiLink,
-            dataType: 'json'
+            dataType: 'text'
         })
             .then(process)
             .then(handleError); // add error handler in case it doesn't work

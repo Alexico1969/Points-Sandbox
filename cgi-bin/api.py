@@ -27,5 +27,4 @@ if user_input:
     print("User-input", user_input)
 else:
     print(test_data)
-...
 '''
