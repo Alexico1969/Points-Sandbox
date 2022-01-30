@@ -7,7 +7,7 @@ python3 -m http.server --cgi
 """
 
 import cgitb
-cgitb.enable()
+cgitb.enable(format="text")
 
 from helper import get_input, json
 
